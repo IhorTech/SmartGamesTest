@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _Atlas_Icons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4620005f1403c604d9ff7165665173fe, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: fa5f64013275c67478b471196493e194, type: 3}
+  - {fileID: 21300000, guid: d15900e143f550a41ac694c8cd4cb107, type: 3}
+  - {fileID: 21300000, guid: a702ba341d9989a48a3919cfcfce9fc6, type: 3}
+  - {fileID: 21300000, guid: 2f5685877757ffa4c99da9f30e7e7976, type: 3}
+  - {fileID: 21300000, guid: abb26a9cdce8e7b4b98db8e78e227dfb, type: 3}
+  - {fileID: 21300000, guid: c802b8ef7719eba4a87a2c1cf09b771f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Icon_Coin
+  - Icon_Heart
+  - Icon_Ticket
+  - Icon_Tape
+  - "Icon_\u0421ompass"
+  - Icon_Search
+  m_RenderDataMap: {}
+  m_Tag: _Atlas_Icons
+  m_IsVariant: 0
