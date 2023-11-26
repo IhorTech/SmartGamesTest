@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using DG.Tweening;
 
 public class ChestController : MonoBehaviour
 {
@@ -51,11 +52,12 @@ public class ChestController : MonoBehaviour
     {
         foreach(GameObject reward in _rewards)        
         {
-            Vector3 finishPosition=reward.transform.position;
+            Vector3 finishPosition=new Vector3(reward.transform.position.x,reward.transform.position.y,0);
             reward.transform.SetParent(_RewardsContainer.transform);
             reward.transform.position=_rewardStartPosition;
             //reward.transform.localScale=Vector3.zero;
-            reward.transform.DOMove(finishPosition, 0.5f);
+            reward.transform.DOMove(finishPosition, 0.5f).SetEase(Ease.OutQuad);
+
         }
     }
     
