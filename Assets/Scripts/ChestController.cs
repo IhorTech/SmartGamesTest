@@ -10,6 +10,8 @@ public class ChestController : MonoBehaviour
     [SerializeField] private List<RewardPrefab> _rewardPrefabs;
     [SerializeField] private GameObject _iconsPositions_01_04;
     [SerializeField] private GameObject _iconsPositions_05_08;
+    [SerializeField] private GameObject _RewardsContainer;
+
     private Vector3 _rewardStartPosition;
     private List<GameObject> _rewards = new();
 
@@ -49,8 +51,11 @@ public class ChestController : MonoBehaviour
     {
         foreach(GameObject reward in _rewards)        
         {
-            reward.transform.SetParent(this.transform);
+            Vector3 finishPosition=reward.transform.position;
+            reward.transform.SetParent(_RewardsContainer.transform);
             reward.transform.position=_rewardStartPosition;
+            //reward.transform.localScale=Vector3.zero;
+            reward.transform.DOMove(finishPosition, 0.5f);
         }
     }
     
@@ -61,9 +66,12 @@ public class ChestController : MonoBehaviour
             Destroy(child.gameObject); 
 
         foreach (Transform child in _iconsPositions_05_08.transform) 
-            Destroy(child.gameObject); 
+            Destroy(child.gameObject);
 
-        rewards.Clear();
+        foreach (Transform child in _RewardsContainer.transform) 
+            Destroy(child.gameObject);
+
+        _rewards.Clear();
 
         for (int i=0; i<rewards.Count; i++)
         {
