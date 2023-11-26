@@ -28,11 +28,13 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 0
       enableTightPacking: 0
-      enableAlphaDilation: 0
+      enableAlphaDilation: 1
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 4620005f1403c604d9ff7165665173fe, type: 3}
+    - {fileID: 102900000, guid: 1e699d39fbfdb654e81399d1a1446ffd, type: 3}
+    - {fileID: 102900000, guid: ceb337443a2b06e4987313ee473f7bb3, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -41,14 +43,18 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fa5f64013275c67478b471196493e194, type: 3}
   - {fileID: 21300000, guid: d15900e143f550a41ac694c8cd4cb107, type: 3}
   - {fileID: 21300000, guid: a702ba341d9989a48a3919cfcfce9fc6, type: 3}
+  - {fileID: 21300000, guid: b48952c407c5b414ba8eda87a5c20411, type: 3}
   - {fileID: 21300000, guid: 2f5685877757ffa4c99da9f30e7e7976, type: 3}
+  - {fileID: 21300000, guid: afc4c78966ecad448b72304192232f4a, type: 3}
   - {fileID: 21300000, guid: abb26a9cdce8e7b4b98db8e78e227dfb, type: 3}
   - {fileID: 21300000, guid: c802b8ef7719eba4a87a2c1cf09b771f, type: 3}
   m_PackedSpriteNamesToIndex:
   - Icon_Coin
   - Icon_Heart
   - Icon_Ticket
+  - button_regular_green
   - Icon_Tape
+  - Board_Regular
   - "Icon_\u0421ompass"
   - Icon_Search
   m_RenderDataMap: {}
