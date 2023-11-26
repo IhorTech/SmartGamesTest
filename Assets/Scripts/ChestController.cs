@@ -66,7 +66,7 @@ public class ChestController : MonoBehaviour
             reward.transform.DOMove(finishPosition, delay).SetEase(Ease.OutQuad);
 
         }
-        await Task.Delay((int)(delay*1000f));
+        await Task.Delay(1700);
         _collectButton.gameObject.SetActive(true);
     }
 
