@@ -10,8 +10,9 @@ public class ChestController : MonoBehaviour
     [SerializeField] private List<RewardPrefab> _rewardPrefabs;
     [SerializeField] private GameObject _iconsPositions_01_04;
     [SerializeField] private GameObject _iconsPositions_05_08;
-    
-    
+    private Vector3 _rewardStartPosition;
+    private List<GameObject> _rewards = new();
+
     public static ChestController Instance {get; private set;}
     private void Awake()
     {
@@ -39,7 +40,20 @@ public class ChestController : MonoBehaviour
         GameObject chestGameObject = Instantiate(_chestPrefab, transform.position, Quaternion.identity, transform);
         Animator chestAnimator = chestGameObject.GetComponent<Animator>();
         chestAnimator.SetTrigger("Show");
+        Chest chest=chestGameObject.GetComponent<Chest>();
+        _rewardStartPosition = chest.RewardsStartPosition.position; 
+        chest.OnChestOpen+=RewardsAppear;
     }
+
+    private void RewardsAppear()
+    {
+        foreach(GameObject reward in _rewards)        
+        {
+            reward.transform.SetParent(this.transform);
+            reward.transform.position=_rewardStartPosition;
+        }
+    }
+    
 
     private void FindIconsPositions(List<Reward> rewards)
     {
@@ -48,6 +62,8 @@ public class ChestController : MonoBehaviour
 
         foreach (Transform child in _iconsPositions_05_08.transform) 
             Destroy(child.gameObject); 
+
+        rewards.Clear();
 
         for (int i=0; i<rewards.Count; i++)
         {
@@ -64,6 +80,7 @@ public class ChestController : MonoBehaviour
                 rewardObject = Instantiate(rewardPrefab.gameObject, Vector3.zero, Quaternion.identity, _iconsPositions_05_08.transform);  
             }
             rewardObject.GetComponent<RewardPrefab>().Init(reward.Amount);
+            _rewards.Add(rewardObject);
         }
 
     }
