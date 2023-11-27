@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f05c0731aad44daca8ee7cac5d8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Trail: {fileID: 3954254991513149508}
   RewardType: 0
   Image: {fileID: 7820612498703106415}
   AmountText: {fileID: 5038588198275272301}

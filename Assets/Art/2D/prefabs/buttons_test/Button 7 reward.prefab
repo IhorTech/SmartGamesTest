@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[0].RewardType
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[1].RewardType
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[2].RewardType
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[3].RewardType
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[4].RewardType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[5].RewardType

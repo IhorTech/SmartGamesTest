@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class RewardPrefab : MonoBehaviour
 {
+    public GameObject Trail;
     public RewardType RewardType;
     public Image Image;
     public TMP_Text AmountText;
