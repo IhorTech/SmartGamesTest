@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7229152648806801427, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
       propertyPath: _rewards.Array.data[0].Amount
