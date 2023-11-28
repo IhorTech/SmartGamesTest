@@ -51,6 +51,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3954254991528159712, guid: 70514ed674aa53d49881381c95fda757, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.21176472
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954254991528159712, guid: 70514ed674aa53d49881381c95fda757, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.9058824
+      objectReference: {fileID: 0}
     - target: {fileID: 9123005954373618330, guid: 70514ed674aa53d49881381c95fda757, type: 3}
       propertyPath: m_RootOrder
       value: 0

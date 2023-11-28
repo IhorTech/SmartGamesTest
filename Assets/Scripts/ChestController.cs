@@ -93,7 +93,7 @@ public class ChestController : MonoBehaviour
             {
                 float delay = 2.5f;
                 reward.transform.DOMoveY(_rewardsHidePositions.transform.position.y, delay).SetEase(Ease.OutQuad);
-                reward.transform.DOScale(0,delay/2f);
+                reward.transform.DOScale(1,delay/2f);
             }
 
             
