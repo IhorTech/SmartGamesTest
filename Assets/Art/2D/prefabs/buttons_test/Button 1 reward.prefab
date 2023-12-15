@@ -119,5 +119,9 @@ PrefabInstance:
       propertyPath: m_text
       value: Receive 1 reward
       objectReference: {fileID: 0}
+    - target: {fileID: 7229152649671843191, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}
+      propertyPath: m_fontSize
+      value: 38.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4188d71a54c972248bc2da00d1d01f74, type: 3}

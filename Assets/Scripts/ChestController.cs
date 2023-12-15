@@ -13,8 +13,9 @@ public class ChestController : MonoBehaviour
     [SerializeField] private GameObject _iconsPositions_01_04;
     [SerializeField] private GameObject _iconsPositions_05_08;
     [SerializeField] private GameObject _RewardsContainer;
-    [SerializeField] private Button _collectButton;
-    [SerializeField] private GameObject _rewardsHidePositions;
+    [SerializeField] private Animator _collectButton;
+    [SerializeField] private Transform _rewardsHidePositions;
+    [SerializeField] private Transform _rewardsWayPoint;
     [SerializeField] private Transform _coinTargetPosition;
     [SerializeField] private ParticleSystem _coinFinish;
     [SerializeField] private Transform _positionCounter;
@@ -32,7 +33,7 @@ public class ChestController : MonoBehaviour
         _oldPos=_positionCounter.localPosition;    
         Instance = this;
         _collectButton.gameObject.SetActive(false);
-        _collectButton.onClick.AddListener(RewardHide);
+        _collectButton.GetComponent<Button>().onClick.AddListener(RewardHide);
     } 
 
     public void ReceiveReward(List<Reward> rewards)
@@ -76,7 +77,7 @@ public class ChestController : MonoBehaviour
             reward.Trail.gameObject.SetActive(true);
 
         }
-        await Task.Delay(1700);
+        await Task.Delay(850);
         _collectButton.gameObject.SetActive(true);
     }
 
@@ -91,15 +92,23 @@ public class ChestController : MonoBehaviour
             }
             else 
             {
-                float delay = 2.5f;
-                reward.transform.DOMoveY(_rewardsHidePositions.transform.position.y, delay).SetEase(Ease.OutQuad);
-                reward.transform.DOScale(1,delay/2f);
+                float flyTime = 2.5f;  
+                float delay=Random.Range(0.2f, 0.8f);          
+
+                Vector3[] points=
+                {
+                    _rewardsWayPoint.position, _rewardsHidePositions.position
+                };
+                reward.transform.DOPath(points, flyTime, PathType.CatmullRom).SetEase(Ease.OutQuad).SetDelay(delay);
+                reward.transform.DOScale(1,flyTime/2f).SetDelay(delay);
+
             }
 
             
-        }        
-        _collectButton.gameObject.SetActive(false);   
-        await Task.Delay(1000);
+        }    
+        _collectButton.SetTrigger("hide");
+        await Task.Delay(1000);   
+        _collectButton.gameObject.SetActive(false);           
         _testButtonsContainer.SetActive(true);
     }
 
